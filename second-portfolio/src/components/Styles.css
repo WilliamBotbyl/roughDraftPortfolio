@@ -1,0 +1,385 @@
+/* html,
+body {
+  scroll-behavior: smooth;
+  height: 100%;
+} */
+/* Navbar */
+.nav-container {
+  /* display: flex;
+  align-items: center; */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  z-index: 1;
+}
+.initials {
+  height: 8vh;
+  width: 6vw;
+}
+.nav-link {
+  position: relative;
+  font-weight: 900;
+  font-size: 1.2rem;
+  color: #fff;
+  outline: none;
+  text-decoration: none !important;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  height: 8px;
+  bottom: -1px;
+  width: 0;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(rgb(231, 45, 206)),
+    color-stop(70%, #cd5ff8)
+  );
+  background: -o-linear-gradient(left, rgb(231, 45, 206), #cd5ff8 70%);
+  background: linear-gradient(0.25turn, rgb(231, 45, 206), #cd5ff8 70%);
+  left: 10px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+.nav-link:hover::after {
+  width: 95%;
+}
+
+/* ternary nav class names */
+.nav-scrolled {
+  background: rgb(10, 10, 10);
+  position: fixed;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 1;
+  -webkit-transition: all 0.5s ease-out 0s !important;
+  -o-transition: all 0.5s ease-out 0s !important;
+  transition: all 0.5s ease-out 0s !important;
+  -webkit-backdrop-filter: blur(15px) !important;
+  backdrop-filter: blur(15px) !important;
+  background-color: rgba(68, 59, 59, 0.5);
+  -webkit-box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171) !important;
+  box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171) !important;
+}
+.nav-not-scrolled {
+  background-color: transparent;
+  position: sticky;
+  position: -webkit-sticky;
+  z-index: 100;
+  top: 0;
+  -webkit-transition: all 0.5s ease-out 0s !important;
+  -o-transition: all 0.5s ease-out 0s !important;
+  transition: all 0.5s ease-out 0s !important;
+  -webkit-box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171) !important;
+  box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171) !important;
+  -webkit-backdrop-filter: blur(15px) !important;
+  backdrop-filter: blur(15px) !important;
+}
+.fork {
+  padding-left: 10px;
+}
+/* home */
+
+/* .home-container {
+  height: 100vh;
+} */
+.wave {
+  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.1s; /* Change to speed up or slow down */
+  animation-iteration-count: infinite; /* Never stop waving :) */
+  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.home-header {
+  padding-top: 100px !important;
+  font-family: "Paytone One", sans-serif;
+}
+.heading {
+  font-size: 2.4em !important;
+  padding-left: 250px !important;
+}
+.heading-name {
+  font-size: 2.4em !important;
+  padding-left: 190px !important;
+}
+.main-name {
+  color: #cd5ff8;
+}
+
+.home-mainWrapper {
+  /* background-image: url(./Images/backgroundTech.jpeg);
+  background-size: cover;
+  background-position: center;
+  position: fixed; */
+  padding-bottom: 30px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: left top;
+  position: relative;
+}
+.img-home {
+  margin-bottom: 20px;
+}
+
+/* Type writer */
+.Typewriter__wrapper {
+  font-size: 2em !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  font-family: "Paytone One", sans-serif;
+}
+
+@media (max-width: 767px) {
+  .Typewriter__wrapper {
+    font-size: 1.4em !important;
+    font-weight: 500 !important;
+    position: absolute !important;
+  }
+  .Typewriter__cursor {
+    display: none !important;
+  }
+}
+/* Home 2 scroll up button */
+.show-scroll-up {
+  position: fixed !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center !important;
+  -ms-flex-align: center !important;
+  align-items: center !important;
+  -webkit-box-pack: end !important;
+  -ms-flex-pack: end !important;
+  justify-content: flex-end !important;
+  opacity: 1;
+  /* margin-left: 90vw; */
+  right: 3vw;
+  bottom: 25vh;
+}
+.show-scroll-up:hover {
+  cursor: pointer;
+}
+.hide-scroll {
+  position: fixed !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center !important;
+  -ms-flex-align: center !important;
+  align-items: center !important;
+  -webkit-box-pack: end !important;
+  -ms-flex-pack: end !important;
+  justify-content: flex-end !important;
+  opacity: 0;
+  margin-left: 40vw;
+}
+
+/* Home 2 (about me) */
+svg {
+  transform: scale(0.75);
+}
+.home2-header {
+  margin-left: 90px;
+  font-family: "Passion One";
+}
+/* .home2-container {
+}
+.outside-wrapper-h2 {
+  background-image: url(./Images/backgroundTech.jpeg);
+  background-size: cover;
+  background-position: center;
+} */
+.introduction-body {
+  color: #fff;
+  font-size: 1.1em;
+  font-family: "Passion One";
+  font-size: 1.3em;
+}
+@media (max-width: 768px) {
+  .introduction-body {
+    display: flex;
+  }
+}
+.purple {
+  color: #cd5ff8;
+  font-family: "Paytone One", sans-serif;
+}
+.flexDirection-change {
+  display: flex;
+  flex-direction: row;
+  padding-top: 20vh;
+}
+.avatar {
+  height: 250px;
+  width: 200px;
+  margin-left: 90px;
+}
+.flex-introduction-body {
+  display: flex;
+  align-items: center;
+}
+.findMe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10vh;
+}
+/* .social-icons {
+}
+.social-links {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.soc */
+.social-links {
+  justify-content: center !important;
+  padding-top: 15px !important;
+  display: inline-block !important;
+  position: relative !important;
+  padding-inline-start: 0 !important;
+}
+/* .social-icon {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 2em;
+  background: rgba(255, 255, 255, 0.972) !important;
+  border-radius: 50%;
+  transition: 0.5s !important;
+  list-style-type: none !important;
+  display: inline-block; */
+/* }
+.social-icon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #68187a;
+  transition: 0.5s;
+  transform: scale(0.9);
+  z-index: -1;
+}
+.social-icon:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #801f95;
+}
+.social-icon:hover {
+  color: #87209e;
+  box-shadow: 0 0 5px #87209e;
+  text-shadow: 0 0 2px #87209e;
+} */
+
+.home-social-icons {
+  position: relative !important;
+  display: inline-block !important;
+  width: 40px !important;
+  height: 40px !important;
+  text-align: center !important;
+  font-size: 1.2em !important;
+  line-height: 2em !important;
+  background: rgba(255, 255, 255, 0.972) !important;
+  border-radius: 50% !important;
+  transition: 0.5s !important;
+}
+
+.home-social-icons::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #68187a;
+  transition: 0.5s;
+  transform: scale(0.9);
+  z-index: -1;
+}
+
+.home-social-icons:hover::before {
+  transform: scale(2.9);
+  box-shadow: 0 0 25px #801f95;
+}
+
+.home-social-icons:hover {
+  color: #87209e;
+  box-shadow: 0 0 35px #ff4646;
+  text-shadow: 0 0 32px #ca29ee;
+}
+.social-icon {
+  display: inline-block !important;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.icon-colour {
+  color: #700c86 !important;
+}
+
+/* Footer */
+.footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 5vh;
+  background-color: rgb(32, 32, 32);
+  margin-top: 0px;
+}
+.footer-text {
+  color: white;
+  position: relative;
+}
+/* Trying to make background stretch full home page size */
+.backgroundWrapper {
+  background-image: url(./Images/backgroundTech.jpeg);
+  /* position: fixed; */
+  background-size: cover;
+  /* -o-background-size: cover; */
+  /* -webkit-background-size: cover; */
+  background-repeat: no-repeat;
+  z-index: -1;
+}
